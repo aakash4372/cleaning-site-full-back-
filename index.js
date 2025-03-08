@@ -6,7 +6,12 @@ const nodemailer = require("nodemailer");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "https://clening-site-front.vercel.app/" })); // Allow all origins (adjust as needed)
+app.use(cors({
+    origin: "https://clening-site-front.vercel.app",
+    methods: "GET,POST",
+    allowedHeaders: "Content-Type"
+  }));
+  
 app.use(express.json()); // Parse JSON requests
 
 // Nodemailer transporter setup
