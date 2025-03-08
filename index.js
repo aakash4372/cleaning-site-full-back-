@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 
 // Root route
 app.get("/", (req, res) => {
-  res.send("Welcome to the Cleaning Server!");
+  res.send("Welcome to the Cleaning Serverss!");
 });
 
 // Email sending route
