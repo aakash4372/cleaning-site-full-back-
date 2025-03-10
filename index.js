@@ -42,7 +42,7 @@ app.post("/send-email", async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.RECEIVER_EMAIL, // Send to Website Owner
+      to: email, // Send to Website Owner
       subject: "New Enquiry Received",
       html: `
         <h1>New Enquiry</h1>
